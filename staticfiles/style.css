@@ -1,0 +1,114 @@
+:root {
+  --slate_400: 148, 163, 184;
+  --slate_700: 51, 65, 85;
+  --slate_300: 203, 213, 225;
+  --blue_500: 59, 130, 246;
+  --blue_500_fade: 79, 143, 246;
+  --blue_700: 29, 78, 216;
+  --num-cols: 2;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+button{
+  outline: none;
+}
+button:not(:disabled){
+  cursor: pointer;
+}
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.form-container{
+  width: 80%;
+  height: fit-content;
+  display: flex;
+  gap: 0.7rem;
+  border-radius: 25px;
+  padding: 2rem 0rem;
+  background-color: rgb(var(--slate_400), 0.2);
+}
+.hero-img{
+  flex-shrink: 0;
+  width: 50%;
+  height: fit-content;
+  margin-block: auto;
+}
+.hero-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.title{
+  font-size: 4rem;
+}
+.form{
+  padding-inline: 2rem;
+  flex-shrink: 0;
+  width: 50%;
+}
+input,
+textarea {
+  border: none;
+  outline: none;
+}
+.control_wrap{
+  margin-block-end: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.control{
+  padding: 0.7rem 1rem;
+  border-radius: 0.2rem;
+  color: rgb(var(--blue_500));
+  border: 1px solid rgb(var(--blue_500));
+}
+.btn{
+  outline: none;
+  cursor: pointer;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+}
+.btn-outline{
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
+  color: rgb(var(--blue_500));
+  border: 1px solid rgb(var(--blue_500));
+}
+.btn-outline:hover{
+  background-color: rgba(var(--blue_500), 0.1);
+}
+
+#login{
+  display: none;
+}
+.switch{
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+
+  background-color: rgb(var(--blue_500));
+  text-transform: capitalize;
+  color: white;
+  border: none;
+}
+#form-switch{
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+#mode-switch{
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+}

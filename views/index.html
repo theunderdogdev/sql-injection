@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/utils.js" defer></script>
+    <script src="/static/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <button
+        class="btn switch"
+        data-from="register"
+        data-to="login"
+        type="button"
+        id="form-switch">
+        Switch to: login
+      </button>
+      <button
+        class="btn switch"
+        data-mode="secure"
+        type="button"
+        id="mode-switch">
+        Mode: secure
+      </button>
+      <div class="form-container">
+        <div class="hero-img">
+          <img src="/static/images/field.svg" alt="" />
+        </div>
+        <form class="form" id="register">
+          <h1 class="title" style="margin-bottom: 2rem">Register</h1>
+          <div class="control_wrap">
+            <label for="username">Username</label>
+            <input class="control" type="text" name="username" id="username" required />
+          </div>
+          <div class="control_wrap">
+            <label for="name">Full Name</label>
+            <input class="control" type="text" name="name" id="name" required/>
+          </div>
+          <div class="control_wrap">
+            <label for="email">Email</label>
+            <input class="control" type="email" name="email" id="email" required />
+          </div>
+          <div class="control_wrap">
+            <label for="password">Password</label>
+            <input
+              class="control"
+              type="password"
+              name="password"
+              id="password" required />
+          </div>
+          <button class="btn btn-outline" type="submit">Register</button>
+        </form>
+        <form class="form" id="login">
+          <h1 class="title" style="margin-bottom: 2rem">Login</h1>
+          <div class="control_wrap">
+            <label for="login-username">Username</label>
+            <input
+              class="control"
+              type="text"
+              name="username"
+              id="login-username" required/>
+          </div>
+          <div class="control_wrap">
+            <label for="login-password">Password</label>
+            <input
+              class="control"
+              type="password"
+              name="password"
+              id="login-password" required />
+          </div>
+          <button class="btn btn-outline" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
